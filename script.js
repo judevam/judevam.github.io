@@ -4,27 +4,50 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.title = `${CONTENT.name} — ${CONTENT.role}`;
 
+  // Keep the meta description in sync with content.js for browsers that read it live.
+  // (Note: social preview bots read index.html directly and won't see this JS update —
+  // that's why the same description should also be set by hand in index.html's <head>.)
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && CONTENT.seo && CONTENT.seo.description) {
+    metaDesc.setAttribute("content", CONTENT.seo.description);
+  }
+
   // Hero
   document.getElementById("hero-name").textContent = CONTENT.name;
   document.getElementById("hero-role").textContent = CONTENT.role;
   document.getElementById("hero-tagline").textContent = CONTENT.tagline;
 
+  const photoEl = document.getElementById("hero-photo");
+  if (CONTENT.photo) {
+    photoEl.src = CONTENT.photo;
+    photoEl.alt = CONTENT.name;
+    photoEl.style.display = "";
+  }
+
+  const statusEl = document.getElementById("hero-status");
+  if (CONTENT.status) {
+    statusEl.textContent = CONTENT.status;
+    statusEl.style.display = "";
+  }
+
+  const resumeEl = document.getElementById("hero-resume");
+  if (CONTENT.resumeUrl) {
+    resumeEl.href = CONTENT.resumeUrl;
+    resumeEl.style.display = "";
+  }
+
   // About
   document.getElementById("about-text").textContent = CONTENT.about.trim().replace(/\s+/g, " ");
   document.getElementById("about-location").textContent = CONTENT.location ? `Based in ${CONTENT.location}` : "";
 
-  // Projects
+  // Projects — each card links to its own detail page (project.html?id=...)
   const projectsList = document.getElementById("projects-list");
   CONTENT.projects.forEach(p => {
-    const card = document.createElement(p.link ? "a" : "div");
+    const card = document.createElement("a");
     card.className = "project-card fade-in";
-    if (p.link) {
-      card.href = p.link;
-      card.target = "_blank";
-      card.rel = "noopener noreferrer";
-      card.style.textDecoration = "none";
-      card.style.color = "inherit";
-    }
+    card.href = `project.html?id=${encodeURIComponent(p.id)}`;
+    card.style.textDecoration = "none";
+    card.style.color = "inherit";
 
     const tagsHtml = (p.stack || []).map(s => `<span class="tag">${escapeHtml(s)}</span>`).join("");
 
@@ -37,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <p class="project-summary">${escapeHtml(p.summary || "")}</p>
         <div class="stack-tags">${tagsHtml}</div>
+        <span class="read-more">View details &rarr;</span>
       </div>
     `;
     projectsList.appendChild(card);

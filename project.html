@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="description" content="Project detail page from an engineering portfolio." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero project-hero">
+    <div class="wrap hero-inner">
+      <a class="back-link" href="index.html">&larr; Back to all projects</a>
+      <p class="eyebrow" id="project-code"></p>
+      <h1 class="name" id="project-title" style="font-size: clamp(2rem, 5vw, 3rem);"></h1>
+      <p class="role" id="project-year"></p>
+      <div class="stack-tags" id="project-stack" style="margin-top: 16px;"></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="project-overview">
+      <div class="wrap">
+        <h2 class="section-title">Overview</h2>
+        <p class="about-text" id="detail-overview"></p>
+      </div>
+    </section>
+
+    <section id="project-approach">
+      <div class="wrap">
+        <h2 class="section-title">Approach</h2>
+        <p class="about-text" id="detail-approach"></p>
+      </div>
+    </section>
+
+    <section id="project-outcome">
+      <div class="wrap">
+        <h2 class="section-title">Outcome</h2>
+        <p class="about-text" id="detail-outcome"></p>
+      </div>
+    </section>
+
+    <section id="project-images" style="display:none;">
+      <div class="wrap">
+        <h2 class="section-title">Gallery</h2>
+        <div class="image-gallery" id="detail-images"></div>
+      </div>
+    </section>
+
+    <section id="project-external" style="display:none;">
+      <div class="wrap">
+        <h2 class="section-title">Link</h2>
+        <div class="contact-links" id="detail-external"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a class="back-link" href="index.html">&larr; Back to all projects</a>
+    </div>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="project.js"></script>
+</body>
+</html>

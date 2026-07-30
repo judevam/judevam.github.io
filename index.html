@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
 
+  <!-- Favicon (already set up, no action needed) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!--
+    SEO / link preview tags — EDIT THESE MANUALLY.
+    Unlike the rest of the page, this part can't pull from content.js automatically,
+    because when your link is shared on LinkedIn/Slack/iMessage, those apps read this
+    HTML directly without running any JavaScript. Fill in the content="" values below
+    to match what's in content.js.
+  -->
+  <meta name="description" content="Engineering portfolio showcasing projects, skills, and experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Your Name — Engineering Portfolio" />
+  <meta property="og:description" content="Engineering portfolio showcasing projects, skills, and experience." />
+  <meta property="og:image" content="" /> <!-- paste a full image URL here, e.g. yoursite.github.io/preview.jpg -->
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,10 +32,19 @@
 
   <header class="hero">
     <div class="wrap hero-inner">
-      <p class="eyebrow">Engineering Portfolio</p>
-      <h1 class="name" id="hero-name">Name</h1>
-      <p class="role" id="hero-role">Role</p>
-      <p class="tagline" id="hero-tagline">Tagline</p>
+      <div class="hero-top">
+        <div>
+          <p class="eyebrow">Engineering Portfolio</p>
+          <h1 class="name" id="hero-name">Name</h1>
+          <p class="role" id="hero-role">Role</p>
+          <p class="tagline" id="hero-tagline">Tagline</p>
+          <span class="status-badge" id="hero-status" style="display:none;"></span>
+          <div class="hero-actions">
+            <a class="resume-btn" id="hero-resume" href="" style="display:none;" target="_blank" rel="noopener noreferrer">Download Resume ↓</a>
+          </div>
+        </div>
+        <img id="hero-photo" class="hero-photo" src="" alt="" style="display:none;" />
+      </div>
     </div>
   </header>
 
