@@ -1,20 +1,31 @@
 const CONTENT = {
 
   // ---- Header / Hero ----
-  name: "Jude Vamenta",
+  eyebrow: "Engineering Portfolio", // small label above your name — change or clear it
+  name: "Your Name",
   role: "Mechanical Engineer",
-  tagline: "BS Mechanical Engineering Tufts University '27",
-  
+  tagline: "I design and build things that have to actually work.",
+
+  // Optional photo of you for the homepage.
+  // Put an image file (e.g. "photo.jpg") in this same folder and put its filename here.
+  // Or paste a full image URL instead. Leave as "" to show no photo.
   photo: "",
 
-  // ---- About ----
-  about: `As a mechanical engineering student at Tufts University, I have 
-  placed an emphasis on working on projects to challenge myself and gain 
-  hands-on experience. I am particularly passionate in areas such as design, 
-  controls, robotics, automation, and mechatronics and hope to continue to 
-  collaborate with teams and fabricate my own ideas into reality.`,
+  // Optional short status badge shown under the tagline — good for things recruiters scan for.
+  // e.g. "Open to internships — Summer 2027" or "Graduating May 2027"
+  // Leave as "" to hide it.
+  status: "",
 
-  location: "Somerville, MA",
+  // Optional resume — put a PDF (e.g. "resume.pdf") in this same folder and put its filename here,
+  // or paste a full URL to a hosted PDF. Leave as "" to hide the resume button.
+  resumeUrl: "",
+
+  // ---- About ----
+  about: `A couple sentences about who you are, what kind of engineering
+  you do, and what you're looking for. Keep it short — 2 to 4 sentences
+  is plenty. This shows up right under the hero section.`,
+
+  location: "Boston, MA",
 
   // ---- Projects ----
   // Add or remove as many project objects as you want — the page updates automatically.
@@ -24,10 +35,11 @@ const CONTENT = {
     {
       id: "project-one",
       code: "SPEC 01",
-      title: "Load Lifting Robot",
-      year: "2025",
+      title: "Project Name One",
+      year: "2026",
       summary: "One or two sentences on what this project is and what problem it solves.",
       stack: ["CAD", "SolidWorks", "Manufacturing"],
+      thumbnail: "", // optional: filename (e.g. "project-one-thumb.jpg") or full image URL. Leave "" for no thumbnail.
       externalLink: "", // optional: live demo, GitHub repo, video, etc.
       details: {
         overview: "A longer explanation of what this project is, why you built it, and what problem it solves. This is your chance to give real context — a paragraph or two is great.",
@@ -39,10 +51,11 @@ const CONTENT = {
     {
       id: "project-two",
       code: "SPEC 02",
-      title: "Electronic Accordion",
+      title: "Project Name Two",
       year: "2025",
       summary: "One or two sentences on what this project is and what problem it solves.",
       stack: ["Python", "Sensors", "Data Analysis"],
+      thumbnail: "",
       externalLink: "",
       details: {
         overview: "A longer explanation of what this project is, why you built it, and what problem it solves.",
@@ -54,76 +67,17 @@ const CONTENT = {
     {
       id: "project-three",
       code: "SPEC 03",
-      title: "Two-player motorized Tabletop Ball Game",
+      title: "Project Name Three",
       year: "2025",
       summary: "One or two sentences on what this project is and what problem it solves.",
       stack: ["Circuit Design", "Embedded Systems"],
+      thumbnail: "",
       externalLink: "",
       details: {
         overview: "A longer explanation of what this project is, why you built it, and what problem it solves.",
         approach: "What you actually did: your process, key design decisions, tools/methods used, and any tradeoffs you navigated.",
         outcome: "The result — what it achieved, what you learned, or what you'd do differently next time.",
         images: []
-      }
-    },
-    {
-      id: "project-four",              // must be unique, lowercase, no spaces
-      code: "SPEC 04",                 // just increments — SPEC 01, 02, 03, 04...
-      title: "Custom PCB Desgin",
-      year: "2025",
-      summary: "One or two sentences on what this project is and what problem it solves.",
-      stack: ["Tool A", "Tool B", "Tool C"],
-      externalLink: "",                // optional: demo/repo/video link
-      details: {
-        overview: "A longer explanation of what this project is and why you built it.",
-        approach: "What you actually did — process, decisions, tradeoffs.",
-        outcome: "The result, what you learned, or what you'd change next time.",
-        images: []                     // optional image URLs
-      }
-    },
-    {
-      id: "project-five",              // must be unique, lowercase, no spaces
-      code: "SPEC 05",                 // just increments — SPEC 01, 02, 03, 04...
-      title: "Assistive Dog Treat Dispenser",
-      year: "2025",
-      summary: "One or two sentences on what this project is and what problem it solves.",
-      stack: ["Tool A", "Tool B", "Tool C"],
-      externalLink: "",                // optional: demo/repo/video link
-      details: {
-        overview: "A longer explanation of what this project is and why you built it.",
-        approach: "What you actually did — process, decisions, tradeoffs.",
-        outcome: "The result, what you learned, or what you'd change next time.",
-        images: []                     // optional image URLs
-      }
-    },
-    {
-      id: "project-six",              // must be unique, lowercase, no spaces
-      code: "SPEC 06",                 // just increments — SPEC 01, 02, 03, 04...
-      title: "Automated Watering System",
-      year: "2024-2025",
-      summary: "One or two sentences on what this project is and what problem it solves.",
-      stack: ["Tool A", "Tool B", "Tool C"],
-      externalLink: "",                // optional: demo/repo/video link
-      details: {
-        overview: "A longer explanation of what this project is and why you built it.",
-        approach: "What you actually did — process, decisions, tradeoffs.",
-        outcome: "The result, what you learned, or what you'd change next time.",
-        images: []                     // optional image URLs
-      }
-    },
-    {
-      id: "project-seven",              // must be unique, lowercase, no spaces
-      code: "SPEC 04",                 // just increments — SPEC 01, 02, 03, 04...
-      title: "Infiltration Trench Model",
-      year: "2026",
-      summary: "One or two sentences on what this project is and what problem it solves.",
-      stack: ["Tool A", "Tool B", "Tool C"],
-      externalLink: "",                // optional: demo/repo/video link
-      details: {
-        overview: "A longer explanation of what this project is and why you built it.",
-        approach: "What you actually did — process, decisions, tradeoffs.",
-        outcome: "The result, what you learned, or what you'd change next time.",
-        images: []                     // optional image URLs
       }
     }
   ],
@@ -140,7 +94,15 @@ const CONTENT = {
   email: "your.email@example.com",
   links: [
     { label: "GitHub", url: "https://github.com/yourusername" },
-    { label: "LinkedIn", url: "https://linkedin.com/in/yourusername" },
-    { label: "Resume", url: "" }
-  ]
+    { label: "LinkedIn", url: "https://linkedin.com/in/yourusername" }
+  ],
+
+  // ---- SEO / link previews ----
+  // This controls how your site looks when shared on LinkedIn, Slack, iMessage, etc.
+  // Note: some of this (below) also needs to be set directly in index.html's <head> —
+  // see the comments there — because social media preview bots don't run JavaScript.
+  seo: {
+    description: "Engineering portfolio showcasing projects, skills, and experience.",
+    previewImage: "" // optional: filename or URL of an image shown in link previews (e.g. "preview.jpg")
+  }
 };

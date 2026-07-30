@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Hero
+  document.getElementById("hero-eyebrow").textContent = CONTENT.eyebrow || "";
   document.getElementById("hero-name").textContent = CONTENT.name;
   document.getElementById("hero-role").textContent = CONTENT.role;
   document.getElementById("hero-tagline").textContent = CONTENT.tagline;
@@ -50,8 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.color = "inherit";
 
     const tagsHtml = (p.stack || []).map(s => `<span class="tag">${escapeHtml(s)}</span>`).join("");
+    const thumbHtml = p.thumbnail
+      ? `<img class="project-thumb" src="${escapeHtml(p.thumbnail)}" alt="${escapeHtml(p.title)}" loading="lazy" />`
+      : "";
 
     card.innerHTML = `
+      ${thumbHtml}
       <div class="project-code">${escapeHtml(p.code || "")}</div>
       <div>
         <div class="project-title-row">
