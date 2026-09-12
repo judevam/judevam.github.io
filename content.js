@@ -52,7 +52,13 @@ After a month of fabrication and testing, our prototype was ready to present to 
 `,
         imagesAfterApproach: ["emid/arduino.JPEG", "emid/jude.JPEG"
         ],
-        outcome: "The result — what it achieved, what you learned, or what you'd do differently next time.",
+        outcome: `After presenting our first prototype, we identified three big weaknesses to fix in our second month: a tangle of wires running from the instrument to external Arduinos on the desk, an imprecise IR-based bellows sensor, and a lack of physical resistance that made the bellows motion feel disconnected from the sound. We rebuilt the instrument around those problems.
+
+We moved to a wireless architecture using ESP32 microcontrollers communicating over ESP-NOW, turning the instrument into a self-contained, battery-powered device that talks wirelessly to a desktop receiver instead of trailing cables. Partway through, we discovered that enabling WiFi on the ESP32 disables half of its analog-to-digital pins — since our 8 soft potentiometers and 8 force sensors needed all 16, we adapted by keeping one Arduino Mega on board to handle analog sensing and relay data to the ESP32 over I2C. We also swapped our original IR sensor for a Time-of-Flight sensor, giving us millimeter-accurate bellows tracking instead of multi-centimeter noise, and added springs between the two halves so pulling the bellows finally had resistance and felt like a real instrument.
+
+The rebuilt Chordian worked: the force sensors gave clean, musically usable velocity readings (a big improvement over the noisy flex sensors in our first prototype), the soft potentiometers let players add expressive "vibrato" by sliding a finger along a key, and the bellows movement translated smoothly into MIDI expression control. We hit some late hurdles — a cracked solder joint took our TOF sensor down right before the demo, and a few button pins were mis-mapped — but both were fixable once diagnosed.
+
+If we kept iterating, we'd add an analog multiplexer to achieve fully wireless communication between the two halves (removing the Mega entirely), move MIDI conversion onto the ESP32 itself so the Chordian could connect directly to any DAW over Bluetooth, and add silicone key covers to fix uneven sensing near the key edges. Overall, the project taught me a lot about designing around real hardware constraints — like the ESP32's ADC limitation — and iterating a mechanical-electrical system based on how it actually feels to play, not just how it measures on a bench.`,
         imagesAfterOutcome: [],
         videos: [],
         images: []
