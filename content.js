@@ -36,12 +36,12 @@ const CONTENT = {
       year: "2025",
       summary: "An Electronic Accordion. Electronic Musical Instrument Design",
       stack: ["Music", "Sensors", "Electronics", "Manufacturing"],
-      thumbnail: "emid/thumb.JPG", // optional: filename (e.g. "project-one-thumb.jpg") or full image URL. Leave "" for no thumbnail.
+      thumbnail: "emid/thumb.jpg", // optional: filename (e.g. "project-one-thumb.jpg") or full image URL. Leave "" for no thumbnail.
       externalLink: "https://mma.pages.tufts.edu/emid/", // optional: live demo, GitHub repo, video, etc.
       details: {
         overview: `This project was completed over the fall semester of 2025, through the Electronic Musical Instrument Design course. After spending a few weeks learning about various sensors, software such as MAX MSP & Reason, MIDI, and synthesizers, small groups were formed, each tasked with creating an electronic musical instrument. While the options of what kind of instrument were endless, it was advised to use an arduino to handle sensor reading, MAX to map different sensor values to different MIDI commands, and Reason to handle different synth presets and sounds. The project was split into two parts: the first month to make a prototype and present it to the class to show it’s potential and what could be done to improve it, and the second month to expand and improve on the first prototype (if our professor liked it enough). 
 `,
-        imagesAfterOverview: ["emid/woodRender.png", "emid/woodButton.JPG",],
+        imagesAfterOverview: ["emid/woodRender.png", "emid/woodButton.jpg",],
         approach: `My group brainstormed and concluded it would be interesting to “extend” or “evolve” an already existing instrument by incorporating electronics to replace mechanisms or how the user would interact with the instrument. We also wanted the user to be able to perform the instrument by themselves, and be able to utilize chords and individual notes at the same time. We proposed the “Chordian”, an electronic accordion. After some early sketches and mock ups, we planned to create our prototype with two main bodies, one responsible for individual notes, and the other for chords. These two bodies would interact with each other through some sort of resistance like a spring to emulate the baffles of a real accordion.
 
 One of the main features of the instrument is the “key box”, a housing that involves 8 metal keys, each with a linear soft potentiometer and a flex sensor. With 8 keys, the user could play every note of a scale, and depending on how hard the push, and where the push on the key, different timbre and expression could be achieved. 
@@ -50,7 +50,7 @@ One of the main features of the instrument is the “key box”, a housing that 
 After a month of fabrication and testing, our prototype was ready to present to the class. It worked successfully, but still had many things we wanted to improve. Cleared by our professor, we were allowed to keep on working on it for the rest of the semester, another month to polish and present the final project. 
  
 `,
-        imagesAfterApproach: ["emid/arduino.JPEG", "emid/jude.JPEG"
+        imagesAfterApproach: ["emid/arduino.jpg", "emid/jude.jpg"
         ],
         outcome: `After presenting our first prototype, we identified three big weaknesses to fix in our second month: a tangle of wires running from the instrument to external Arduinos on the desk, an imprecise IR-based bellows sensor, and a lack of physical resistance that made the bellows motion feel disconnected from the sound. We rebuilt the instrument around those problems.
 
@@ -71,7 +71,7 @@ If we kept iterating, we'd add an analog multiplexer to achieve fully wireless c
       year: "2025",
       summary: "Building a game from scratch using microcontrollers and motors",
       stack: ["Design", "Electronics", "Controls", "Sensors"],
-      thumbnail: "TableTop/front.JPG",
+      thumbnail: "TableTop/front.jpg",
       externalLink: "",
       details: {
         overview: `- Build an electromechanical game controlled by a KB2040 microcontroller that uses H-bridges to drive motors 
@@ -99,7 +99,7 @@ If we kept iterating, we'd add an analog multiplexer to achieve fully wireless c
         - I set threshold values for the ultrasonic sensors to determine when the hinge is moved. 
         I also used my custom H-Bridge PCB that I designed in KiCad and soldered myself to drive one of the motors (I used a L298N driver for the other motor)`,
         // TODO: move whichever of the photos below belong right after the Approach into this array.
-        imagesAfterApproach: ["TableTop/backwire.JPG", "TableTop/front.JPG", "TableTop/hbridge.JPG", "TableTop/top.JPG"],
+        imagesAfterApproach: ["TableTop/backwire.jpg", "TableTop/front.jpg", "TableTop/hbridge.jpg", "TableTop/top.jpg"],
 
         outcome: `After all of the wiring and coding was completed, it was time to play! The main issue was that the marble could get stuck in the playing area, outside of the range of a player's flipper. However, I couldn't be happier as all of the LEDs worked and people had fun playing my game.
         If I had more time with this project, I would change a couple things:
@@ -108,7 +108,7 @@ If we kept iterating, we'd add an analog multiplexer to achieve fully wireless c
         // TODO: move whichever of the photos below belong right after the Outcome into this array.
         // For now, ALL your existing photos are kept here together so nothing was lost —
         // split them into imagesAfterOverview / imagesAfterApproach / imagesAfterOutcome above as you like.
-        imagesAfterOutcome: ["TableTop/demo.JPG"],
+        imagesAfterOutcome: ["TableTop/demo.jpg"],
 
         videos: ["TableTop/Win.mp4","TableTop/Hinge.mp4"],
         images: []
