@@ -36,7 +36,7 @@ const CONTENT = {
       year: "2025",
       summary: "An Electronic Accordion. Electronic Musical Instrument Design",
       stack: ["Music", "Sensors", "Electronics", "Manufacturing"],
-      thumbnail: "emid/thumb.jpg", // optional: filename (e.g. "project-one-thumb.jpg") or full image URL. Leave "" for no thumbnail.
+      thumbnail: "emid/thumb.JPG", // optional: filename (e.g. "project-one-thumb.jpg") or full image URL. Leave "" for no thumbnail.
       externalLink: "https://mma.pages.tufts.edu/emid/", // optional: live demo, GitHub repo, video, etc.
       details: {
         overview: `This project was completed over the fall semester of 2025, through the Electronic Musical Instrument Design course. After spending a few weeks learning about various sensors, software such as MAX MSP & Reason, MIDI, and synthesizers, small groups were formed, each tasked with creating an electronic musical instrument. While the options of what kind of instrument were endless, it was advised to use an arduino to handle sensor reading, MAX to map different sensor values to different MIDI commands, and Reason to handle different synth presets and sounds. The project was split into two parts: the first month to make a prototype and present it to the class to show it’s potential and what could be done to improve it, and the second month to expand and improve on the first prototype (if our professor liked it enough). 
@@ -71,7 +71,7 @@ If we kept iterating, we'd add an analog multiplexer to achieve fully wireless c
       year: "2025",
       summary: "Building a game from scratch using microcontrollers and motors",
       stack: ["Design", "Electronics", "Controls", "Sensors"],
-      thumbnail: "TableTop/Front.jpg",
+      thumbnail: "TableTop/front.JPG",
       externalLink: "",
       details: {
         overview: `- Build an electromechanical game controlled by a KB2040 microcontroller that uses H-bridges to drive motors 
@@ -121,7 +121,7 @@ If we kept iterating, we'd add an analog multiplexer to achieve fully wireless c
       year: "2025",
       summary: "Robot design to lift, move, and measure various payloads",
       stack: ["Rasberry Pi", "Circuit Design", "Robotics"],
-      thumbnail: "robot/thumb1.jpg",
+      thumbnail: "robot/thumb1.JPG",
       externalLink: "",
       details: {
         overview: `

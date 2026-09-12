@@ -57,12 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     card.innerHTML = `
       ${thumbHtml}
-      <div class="project-code">${escapeHtml(p.code || "")}</div>
-      <div>
+      <div class="project-body">
         <div class="project-title-row">
-          <h3 class="project-title">${escapeHtml(p.title)}</h3>
+          <span class="project-code">${escapeHtml(p.code || "")}</span>
           <span class="project-year">${escapeHtml(p.year || "")}</span>
         </div>
+        <h3 class="project-title">${escapeHtml(p.title)}</h3>
         <p class="project-summary">${escapeHtml(p.summary || "")}</p>
         <div class="stack-tags">${tagsHtml}</div>
         <span class="read-more">View details &rarr;</span>
