@@ -182,6 +182,28 @@ Another medium fidelity prototype was designed, to prove that the anti-jam mecha
         videos: ["dog/Vid.mp4"],
         images: []
       }
+    },
+    {
+      id: "project-five",
+      code: "SPEC 05",
+      title: "Custom PCB Design",
+      year: "2025",
+      summary: "Two custom PCBs designed in KiCad: a multi-voltage breadboard power supply and a high-current H-bridge motor driver.",
+      stack: ["KiCad", "PCB Design", "Electronics"],
+      thumbnail: "pcb/hbridge.jpg",
+      externalLink: "",
+      details: {
+        overviewLabel: "BreadBoard Voltage Regulator",
+        overview: `This project consisted of creating a custom PCB that would supply three different voltages to my breadboard: 12V, 5V, and 3.3V. By receiving a 12V supply through the barrel jack, the screw terminal would give out 12V, the left rails on the breadboard would supply 3.3V, and the right rails would supply 5V. I first created the circuit using components on my breadboard. After designing the schematic on KiCad, I created the PCB design and had it fabricated. `,
+        imagesAfterOverview: ["pcb/power.jpg", "pcb/powerSchem.png", "pcb/powerKi.png"],
+        approachLabel: "H-Bridge Motor Controller",
+        approach: `This PCB was designed to drive a DC motor in both directions, specifically for microcontrollers. It also accepts power from a 2.1 x 5.5 mm plug from a 12V wall adapter, has a power LED that lights up when motor power is available. Additionally, the motor current traces can handle 12V and 5 A continuously without melting. To first test the functionality of the circuit, I created my own H-Bridge circuit only using components and the breadboard. After testing this, I drew out the schematic in KiCad and then designed the PCB. To ensure safety, I made the traces thicker where 5 A could flow through. This amperage was based of the motors stall current. Additionally, I designed for absolute efficiency and tried to save as much space as possible.`,
+        imagesAfterApproach: ["pcb/hbridge.jpg", "pcb/hbirdgeSchem.png", "pcb/hbridgeKi.png"],
+        outcome: "",
+        imagesAfterOutcome: [],
+        videos: [],
+        images: []
+      }
     }
   ],
 

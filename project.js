@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const d = project.details || {};
-  setOrHideSection("project-overview", "detail-overview", d.overview);
-  setOrHideSection("project-approach", "detail-approach", d.approach);
-  setOrHideSection("project-outcome", "detail-outcome", d.outcome);
+  setOrHideSection("project-overview", "detail-overview", d.overview, "overview-title", d.overviewLabel);
+  setOrHideSection("project-approach", "detail-approach", d.approach, "approach-title", d.approachLabel);
+  setOrHideSection("project-outcome", "detail-outcome", d.outcome, "outcome-title", d.outcomeLabel);
 
   // Image galleries between text sections — each can hold as many photos as you want.
   renderImageGroup("image-slot-0", "images-after-overview", d.imagesAfterOverview);
@@ -72,13 +72,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function setOrHideSection(sectionId, textId, value) {
+// `titleId`/`label` are optional — pass them to override a section's default
+// heading (e.g. "Overview") with a custom one for that project.
+function setOrHideSection(sectionId, textId, value, titleId, label) {
   const section = document.getElementById(sectionId);
   if (!value) {
     section.style.display = "none";
     return;
   }
   document.getElementById(textId).innerHTML = renderRichText(value);
+  if (titleId && label) {
+    document.getElementById(titleId).textContent = label;
+  }
 }
 
 // Turns plain text into HTML: lines starting with "- " become bullet points,
