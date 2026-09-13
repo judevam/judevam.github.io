@@ -12,7 +12,7 @@ const CONTENT = {
   status: "Open to internships — Spring 2027",
 
   // resume — put a PDF
-  resumeUrl: "Jude Vamenta Resume 2026.pdf",
+  resumeUrl: "Jude Vamenta Resume 2026.docx",
 
   // ---- About ----
   about: `A senior mechanical engineering student working across design, 
