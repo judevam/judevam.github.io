@@ -17,7 +17,9 @@ const CONTENT = {
   // ---- About ----
   about: `A senior mechanical engineering student working across design, 
   controls, robotics, and mechatronics, with a minor in music engineering 
-  focused on electronic instrument desgin.`,
+  focused on electronic instrument desgin.
+  
+  Outside of engineering, I love to hike, play saxophone, piano & guitar, and compete on the men's club soccer team.`,
 
   location: "Somerville, MA",
 
