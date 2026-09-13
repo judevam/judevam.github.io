@@ -59,7 +59,7 @@ We moved to a wireless architecture using ESP32 microcontrollers communicating o
 The rebuilt Chordian worked: the force sensors gave clean, musically usable velocity readings (a big improvement over the noisy flex sensors in our first prototype), the soft potentiometers let players add expressive "vibrato" by sliding a finger along a key, and the bellows movement translated smoothly into MIDI expression control. We hit some late hurdles — a cracked solder joint took our TOF sensor down right before the demo, and a few button pins were mis-mapped — but both were fixable once diagnosed.
 
 If we kept iterating, we'd add an analog multiplexer to achieve fully wireless communication between the two halves (removing the Mega entirely), move MIDI conversion onto the ESP32 itself so the Chordian could connect directly to any DAW over Bluetooth, and add silicone key covers to fix uneven sensing near the key edges. Overall, the project taught me a lot about designing around real hardware constraints — like the ESP32's ADC limitation — and iterating a mechanical-electrical system based on how it actually feels to play, not just how it measures on a bench.`,
-        imagesAfterOutcome: ["emid/render.jpg","emid/black.jpg","emid/max1.jpg","emid/max2.jpg","emid/softPot.jpg","emid/wire.jpg","emid/final.jpg"],
+        imagesAfterOutcome: ["emid/render.jpg","emid/black.jpg","emid/max1.png","emid/max2.png","emid/softPot.jpg","emid/wire.jpg","emid/final.jpg"],
         videos: ["emid/test.MOV"],
         images: ["emid/thumb.jpg"]
       }
