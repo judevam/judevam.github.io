@@ -19,7 +19,7 @@ const CONTENT = {
   controls, robotics, and mechatronics, with a minor in music engineering 
   focused on electronic instrument desgin.
   
-  Outside of engineering, I love to hike, play saxophone, piano & guitar, and compete on the men's club soccer team.`,
+  Outside of engineering, I love to hike, play saxophone, piano & guitar, and compete on the club soccer team.`,
 
   location: "Somerville, MA",
 
