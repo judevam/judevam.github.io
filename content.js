@@ -41,7 +41,7 @@ const CONTENT = {
       details: {
         overview: `This project was completed over the fall semester of 2025, through the Electronic Musical Instrument Design course. After spending a few weeks learning about various sensors, software such as MAX MSP & Reason, MIDI, and synthesizers, small groups were formed, each tasked with creating an electronic musical instrument. While the options of what kind of instrument were endless, it was advised to use an arduino to handle sensor reading, MAX to map different sensor values to different MIDI commands, and Reason to handle different synth presets and sounds. The project was split into two parts: the first month to make a prototype and present it to the class to show it’s potential and what could be done to improve it, and the second month to expand and improve on the first prototype (if our professor liked it enough). 
 `,
-        imagesAfterOverview: ["emid/woodRender.png", "emid/woodButton.jpg",],
+        imagesAfterOverview: ["emid/woodRender.png", "emid/testrig.jpg","emid/woodButton.jpg","prototype.jpg"],
         approach: `My group brainstormed and concluded it would be interesting to “extend” or “evolve” an already existing instrument by incorporating electronics to replace mechanisms or how the user would interact with the instrument. We also wanted the user to be able to perform the instrument by themselves, and be able to utilize chords and individual notes at the same time. We proposed the “Chordian”, an electronic accordion. After some early sketches and mock ups, we planned to create our prototype with two main bodies, one responsible for individual notes, and the other for chords. These two bodies would interact with each other through some sort of resistance like a spring to emulate the baffles of a real accordion.
 
 One of the main features of the instrument is the “key box”, a housing that involves 8 metal keys, each with a linear soft potentiometer and a flex sensor. With 8 keys, the user could play every note of a scale, and depending on how hard the push, and where the push on the key, different timbre and expression could be achieved. 
@@ -50,7 +50,7 @@ One of the main features of the instrument is the “key box”, a housing that 
 After a month of fabrication and testing, our prototype was ready to present to the class. It worked successfully, but still had many things we wanted to improve. Cleared by our professor, we were allowed to keep on working on it for the rest of the semester, another month to polish and present the final project. 
  
 `,
-        imagesAfterApproach: ["emid/arduino.jpg", "emid/jude.jpg"
+        imagesAfterApproach: ["emid/arduino.jpg", "emid/jude.jpg", "emid/bix.jpg"
         ],
         outcome: `After presenting our first prototype, we identified three big weaknesses to fix in our second month: a tangle of wires running from the instrument to external Arduinos on the desk, an imprecise IR-based bellows sensor, and a lack of physical resistance that made the bellows motion feel disconnected from the sound. We rebuilt the instrument around those problems.
 
@@ -59,9 +59,9 @@ We moved to a wireless architecture using ESP32 microcontrollers communicating o
 The rebuilt Chordian worked: the force sensors gave clean, musically usable velocity readings (a big improvement over the noisy flex sensors in our first prototype), the soft potentiometers let players add expressive "vibrato" by sliding a finger along a key, and the bellows movement translated smoothly into MIDI expression control. We hit some late hurdles — a cracked solder joint took our TOF sensor down right before the demo, and a few button pins were mis-mapped — but both were fixable once diagnosed.
 
 If we kept iterating, we'd add an analog multiplexer to achieve fully wireless communication between the two halves (removing the Mega entirely), move MIDI conversion onto the ESP32 itself so the Chordian could connect directly to any DAW over Bluetooth, and add silicone key covers to fix uneven sensing near the key edges. Overall, the project taught me a lot about designing around real hardware constraints — like the ESP32's ADC limitation — and iterating a mechanical-electrical system based on how it actually feels to play, not just how it measures on a bench.`,
-        imagesAfterOutcome: [],
-        videos: [],
-        images: []
+        imagesAfterOutcome: ["emid/render.jpg","emid/black.jpg","emid/max1.jpg","emid/max2.jpg","emid/softPot.jpg","emid/wire.jpg","emid/final.jpg"],
+        videos: ["emid/test.MOV"],
+        images: ["emid/thumb.jpg"]
       }
     },
     {
